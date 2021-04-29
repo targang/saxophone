@@ -1,0 +1,36 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  background: url('https://products.ls.graphics/mesh-gradients/images/42.-Charm.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.glass {
+  backdrop-filter: blur(100px) saturate(2);
+  box-shadow: 20px 20px 100px 2px rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.bubble {
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  left: 139px;
+  top: 75px;
+  z-index: -1;
+  background:
+    radial-gradient(
+      50% 50% at 50% 50%,
+      #de1a54 0%,
+      rgba(236, 18, 83, 0.37) 100%
+    );
+  filter: blur(100px);
+}

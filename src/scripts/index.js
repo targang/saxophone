@@ -16,6 +16,18 @@ document.querySelector('.submit-form').addEventListener('submit', (e) => {
   e.preventDefault();
   let form = document.querySelector('.submit-form');
   if (form.checkValidity()) {
+    let name = document.querySelector('#name').value;
+    let phone = document.querySelector('#phone').value;
+    let date = document.querySelector('#date').value;
+    let message = document.querySelector('#message').value;
+
+    let data = { name: name, phone: phone, date: date, message: message };
+
+    fetch('/', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+
     document.querySelector('.form-inner').classList.add('invisible');
     document.querySelector('.form-thanks').classList.remove('hidden');
   }
